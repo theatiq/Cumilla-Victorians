@@ -14,11 +14,11 @@ function App() {
   const [current, setCurrent] = useState(true);
   const [selected, setSelected] = useState([]);
 
-  const notify = () => toast.success("1000000 Free Coins Added !");
-  const warning = () => toast.error("Not enough coin, please add.");
-  const congrats = (player) => toast.success(`Congrats! ${player} added.`);
-  const alreadyAdded = (player) => toast.error(`${player} already added.`);
-  const playerRemoved = (player) => toast.warn(`${player} removed.`);
+  const notify = () => toast.success("1000000 Free Coins Added !", {position: "top-center"});
+  const warning = () => toast.error("Not enough coin, please add.", {position: "top-center"});
+  const congrats = (player) => toast.success(`Congrats! ${player} added.`, {position: "top-center"});
+  const alreadyAdded = (player) => toast.error(`${player} already added.`, {position: "top-center"});
+  const playerRemoved = (player) => toast.warn(`${player} removed.`, {position: "top-center"});
   const maxSelected = () => toast.error("Maximum players already added.");
 
   const handleCurrent = (status) => {
